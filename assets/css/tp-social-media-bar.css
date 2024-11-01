@@ -1,0 +1,90 @@
+
+.tp-social-media-bar-wrapper{
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 1px 2px 10px rgb(0 0 0 / 26%);
+}
+.tp-social-media-bar-wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.tp-social-media-bar-wrapper ul li {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+.tp-social-media-bar-wrapper ul li a {
+    display: block;
+    background-color: #333;
+    transition: .2s;
+    padding: 8px 10px;
+    line-height: 1;
+}
+.tp-social-media-bar-wrapper ul li:hover a{
+    background-color: #3e58e1;
+}
+.tp-social-media-bar-wrapper ul li a svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+.tooltips span {
+    font: 300 12px 'Open Sans', sans-serif;
+    position: absolute;
+    color: #FFFFFF;
+    background: #333;
+    padding: 8px 10px;
+    width: 150px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: transform .3s, opacity .6s, margin-left .2s, margin-top .2s;
+}
+.tooltips[tooltip-position="left"] span{
+    margin-top:30px;
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+  }
+  .tooltips:hover span {
+    visibility: visible;
+    opacity: 1;
+    z-index: 999;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    filter: alpha(opacity=100);
+}
+.tooltips[tooltip-position="left"]:hover span {
+    right: 100%;
+    top: 10px;
+    margin-top: 0;
+    margin-right: 15px;
+}
+.tooltips span:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.tooltips[tooltip-position="left"] span:after{
+    top: 50%;
+    left: 100%;
+    margin-top: -8px;
+    border-left: 8px solid #333;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+.tp-social-media-bar-wrapper ul li img {
+    max-width: 30px;
+}
+.tp-social-media-bar-wrapper ul li a i {
+    color: #fff;
+    transition: .2s;
+}
